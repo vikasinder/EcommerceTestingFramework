@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Cross Browser" thread-count="3" parallel="tests" >
+  <test  name="Chrome">
+  <parameter name="browser" value="chrome"></parameter>
+  
+    <classes>
+      <class name="com.ecommerce.Testcases.IndexPageTest"/>
+     </classes>
+  </test> <!-- Test -->
+  <test  name="FireFox">
+  <parameter name="browser" value="FireFox"></parameter>
+  
+    <classes>
+      <class name="com.ecommerce.Testcases.IndexPageTest"/>
+     </classes>
+  </test> <!-- Test -->
+  <test  name="IE">
+  <parameter name="browser" value="IE"></parameter>
+  
+    <classes>
+      <class name="com.ecommerce.Testcases.IndexPageTest"/>
+     </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
