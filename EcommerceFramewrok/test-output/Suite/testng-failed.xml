@@ -4,9 +4,23 @@
   <listeners>
     <listener class-name="com.ecommerce.utility.ListnerClass"/>
   </listeners>
-  <test thread-count="5" name="AllTests(failed)">
+  <test thread-count="5" name="Smoke(failed)">
     <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
     <classes>
+      <class name="com.ecommerce.Testcases.LoginPageTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="loginTest" invocation-numbers="0"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.ecommerce.Testcases.LoginPageTest -->
       <class name="com.ecommerce.Testcases.IndexPageTest">
         <methods>
           <include name="afterSuite"/>
@@ -16,6 +30,15 @@
           <include name="loadConfig"/>
         </methods>
       </class> <!-- com.ecommerce.Testcases.IndexPageTest -->
+      <class name="com.ecommerce.Testcases.SearchResultPageTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="productAvailabilityTest" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.ecommerce.Testcases.SearchResultPageTest -->
     </classes>
-  </test> <!-- AllTests(failed) -->
+  </test> <!-- Smoke(failed) -->
 </suite> <!-- Failed suite [Suite] -->
